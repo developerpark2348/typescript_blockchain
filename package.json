@@ -1,0 +1,12 @@
+{
+  "name": "react_blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/developerpark2348/typescript_blockchain.git",
+  "author": "developerpark2348 <developerpark2348@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "tsc"
+  }
+}
