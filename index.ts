@@ -1,5 +1,11 @@
 const name = "Park",
-    age = 24,
+    age = 22,
     gender = "male";
 
-export {};
+const sayHi = (name, age, gender?) => {
+    console.log(`Hello ${name}, you are a ${age} old and you are a ${gender}`);
+}
+
+sayHi(name, age);
+
+export {}; 
