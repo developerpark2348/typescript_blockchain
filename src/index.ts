@@ -1,21 +1,28 @@
-class Human {
-    public name: string;
-    public age: number;
-    public gender: string;
-    constructor(name: string, age: number, gender: string){
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+class Block {
+    public index: number;
+    public hash: string;
+    public previousHash: string;
+    public data: string;
+    public timestamp: number;
+    constructor(
+        index: number,
+        hash: string,
+        previousHash: string,
+        data: string,
+        timestamp: number
+    ){
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.data = data;
+        this.timestamp = timestamp;
     }
 }
 
-const lynn = new Human("Lynn", 12, "female")
+const genesisBlock:Block = new Block(0, "20210323", "", "Hi", 126)
 
-const sayHi = (person: Human):string => {
-    return `Hello ${person.name}, you are a ${person.age} old and you are a ${person.gender}!`;
-}
-// console.log였다면, 반환값이 없기에 void를 함수의 결과값으로 줘야함.
+let blockchain: [Block] = [genesisBlock];
 
-console.log(sayHi(lynn));
+console.log(blockchain);
 
 export {}; 
